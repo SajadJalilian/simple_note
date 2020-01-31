@@ -1,0 +1,9 @@
+{% extends "todolist/base.html" %} {% block content %} {% if todos %}
+<ul>
+	{% for todo in todos %}
+	<li><a href="{{ todo.id }}/">{{ todo.name }}</a></li>
+	{% endfor %}
+</ul>
+{% else %}
+<p>No todos are available.</p>
+{% endif %} {% endblock content %}
