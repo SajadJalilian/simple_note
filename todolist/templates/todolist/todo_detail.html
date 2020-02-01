@@ -1,14 +1,17 @@
 {% extends "todolist/base.html" %} {% block content %}
-<h2>name:</h2>
-<p>{{todo.name}}</p>
-<h2>text:</h2>
-<p>{{todo.note_text}}</p>
-<h2>date:</h2>
-<p>{{todo.pub_date}}</p>
-<h2>lists:</h2>
+    <h2>name:</h2>
+    <p>{{todo.name}}</p>
+    <h2>text:</h2>
+    <p>{{todo.note_text}}</p>
+    <h2>date:</h2>
+    <p>{{todo.pub_date}}</p>
 
-{% if list %} {% for list in list %}
-<p>{{ list.name }}</p>
-{% endfor %} {% else %}
-<p>there is no list</p>
-{% endif %} {% endblock %}
+
+    {% if items %}
+        <h2>items</h2>
+        {% for item in items %}
+            <p>{{ item.name }}</p>
+        {% endfor %}
+    {% endif %}
+
+ {% endblock %}

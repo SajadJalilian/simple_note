@@ -1,8 +1,7 @@
 from django.contrib import admin
-from .models import Todo, List, Item
+from .models import Todo, Item
 
 admin.site.register(Todo)
-admin.site.register(List)
 admin.site.register(Item)
 
 
