@@ -14,7 +14,9 @@ def todo_list(request):
 
 def todo(request, todo_id):
     todo = get_object_or_404(Todo, pk=todo_id)
-    context = {'todo': todo}
+    latest_lists = List.objects.filter(todo__id=todo_id)
+    context = {'todo': todo, 'list': latest_lists}
+
     return render(request, 'todolist/todo_detail.html', context)
 
 
