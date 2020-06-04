@@ -1,8 +1,0 @@
-{% extends "todolist/base.html" %} {% block content %}
-
-<p>{{item.name}}</p>
-<p>{{item.item_text}}</p>
-
-<a href="{% url 'todo' todo.id %}">{{todo.name}}</a>
-
-{% endblock %}

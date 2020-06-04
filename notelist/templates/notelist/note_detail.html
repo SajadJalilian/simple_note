@@ -1,10 +1,10 @@
-{% extends "todolist/base.html" %} {% block content %}
+{% extends "notelist/base.html" %} {% block content %}
     <h2>name:</h2>
-    <p>{{todo.name}}</p>
+    <p>{{note.name}}</p>
     <h2>text:</h2>
-    <p>{{todo.note_text}}</p>
+    <p>{{note.note_text}}</p>
     <h2>date:</h2>
-    <p>{{todo.pub_date}}</p>
+    <p>{{note.pub_date}}</p>
 
 
     {% if items %}

@@ -1,0 +1,8 @@
+{% extends "notelist/base.html" %} {% block content %}
+
+<p>{{item.name}}</p>
+<p>{{item.item_text}}</p>
+
+<a href="{% url 'note' note.id %}">{{note.name}}</a>
+
+{% endblock %}
