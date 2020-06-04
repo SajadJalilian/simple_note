@@ -1,6 +1,4 @@
 {% extends "notelist/base.html" %} {% block content %}
-    <h2>name:</h2>
-    <p>{{note.name}}</p>
     <h2>text:</h2>
     <p>{{note.note_text}}</p>
     <h2>date:</h2>
@@ -10,7 +8,7 @@
     {% if items %}
         <h2>items</h2>
         {% for item in items %}
-            <p>{{ item.name }}</p>
+            <p>{{ item.note }}</p>
         {% endfor %}
     {% endif %}
 
